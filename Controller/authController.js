@@ -5,7 +5,7 @@ const smtpTransport = require("nodemailer-smtp-transport");
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 // import dotenv from 'dotenv';
 const dotenv = require('dotenv')
-const { SECRET_KEY,GMAIL_ID,GMAIL_PW } = require("../config/secret") || process.env;
+const { SECRET_KEY,GMAIL_ID,GMAIL_PW } = process.env || require("../config/secret") ;
 require('dotenv').config();
 
 // const SECRET_KEY = process.env.SECRET_KEY;
