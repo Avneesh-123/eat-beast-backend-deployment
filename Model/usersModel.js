@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const crypto = require("crypto");
-const {DB_LINK} =  process.env.DB_LINK || require("../config/secret.js") ;
+const {DB_LINK} =  process.env || require("../config/secret.js") ;
 require('dotenv').config();
 // const DB_LINK = process.env.DB_LINK;
 
