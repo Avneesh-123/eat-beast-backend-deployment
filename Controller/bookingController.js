@@ -47,4 +47,9 @@ async function createNewBooking(userEmail, planId) {
   
 }
 
+async function checkoutComplete(req,res){
+  console.log("Checkout complete ran!!");
+}
+
 module.exports.createPaymentSession = createPaymentSession;
+module.exports.checkoutComplete = checkoutComplete;
