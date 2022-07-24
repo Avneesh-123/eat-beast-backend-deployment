@@ -28,8 +28,8 @@ async function createPaymentSession(req , res){
               },
             ],
             mode: 'payment',
-            success_url: 'http://localhost:3000/',
-            cancel_url: 'http://localhost:3000/',
+            success_url: 'https://eat-beast-herk.herokuapp.com',
+            cancel_url: 'https://eat-beast-herk.herokuapp.com',
         })
         res.json({
             session
@@ -49,6 +49,10 @@ async function createNewBooking(userEmail, planId) {
 
 async function checkoutComplete(req,res){
   console.log("Checkout complete ran!!");
+  console.log("Request object");
+  console.log(req);
+
+
 }
 
 module.exports.createPaymentSession = createPaymentSession;
